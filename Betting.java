@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Betting {
-    private int balance = 200;
+    private int balance;
 
     public static void main(String[] args) {
         Betting myBet = new Betting(200);
