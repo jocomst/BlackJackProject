@@ -8,7 +8,7 @@ public class Betting {
 
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("How much money would you like to bet? $5, 10,15,20 or 25");
+        System.out.println("How much money would you like to bet? $5, 10, 15, 20 or 25");
 
         int bet = scan.nextInt();
 
@@ -48,7 +48,7 @@ public class Betting {
                 break;
             }
         }
-        System.out.println("You have " + balance + " left");
+        System.out.println("You have $" + balance + " left");
     }
 
     public int setWinBalance(int bet) {
