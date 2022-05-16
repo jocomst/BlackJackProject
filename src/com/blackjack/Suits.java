@@ -1,5 +1,18 @@
 package com.blackjack;
 
 public enum Suits {
-    DIAMOND, HEART, SPADE, CLUB
+    DIAMOND("Diamonds"),
+    HEART("Hearts"),
+    SPADE("Spades"),
+    CLUB("Clubs");
+
+    String suitName;
+
+    Suits(String suitName) {
+        this.suitName = suitName;
+    }
+
+    public String toString() {
+        return this.suitName;
+    }
 }

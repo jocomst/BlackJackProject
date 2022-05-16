@@ -18,18 +18,26 @@ public class Card {
         this.suit = suit;
     }
 
+    public Card(Card card) {
+        this.suit = card.getSuit();
+        this.value = card.value;
+    }
+
     // random card generated
     public Card() {
         this.suit = getRandomSuit();
-        this.value = getRandomValue();
     }
 
     public String toString() {
-        return this.suit.toString() + "-" + this.value.toString();
+        return this.value + " of " + this.suit.toString() + "(" + this.value.value + ")";
     }
 
-    public Values getValue() {
-        return this.value;
+    public int getValue() {
+        return this.value.value;
+    }
+
+    public Suits getSuit() {
+        return this.suit;
     }
 
     public Values getRandomValue() {
