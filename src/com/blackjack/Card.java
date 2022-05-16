@@ -40,10 +40,6 @@ public class Card {
         return this.suit;
     }
 
-    public Values getRandomValue() {
-        return values[randomValues.nextInt(values.length)];
-    }
-
     public Suits getRandomSuit() {
         return suits[randomSuits.nextInt(values.length)];
     }

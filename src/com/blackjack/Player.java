@@ -31,4 +31,22 @@ public class Player extends Person{
             this.makeDecision(deck, discard);
         } else System.out.println("You stand");
     }
+
+    public Integer[] makeBet() {
+        Integer[] arr = new Integer[2];
+        if (this.accountInfo().getBalance() > 0) {
+            System.out.println("Let's make a bet! Your current balance is: " + this.accountInfo().getBalance());
+            int amount = scanner.nextInt();
+            if (amount <= this.accountInfo().getBalance()) {
+                arr[0] = amount;
+                arr[1] = 1;
+            } else {
+                System.out.println("Not enough money to bet, sorry bro.");
+                arr[0] = 0;
+                arr[1] = 0;
+            }
+        }
+
+        return arr;
+    }
 }

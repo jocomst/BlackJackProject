@@ -22,9 +22,6 @@ public class Deck {
         }
     }
 
-    public void createFullDeck() {
-    }
-
     public void shuffleDeck(){
         ArrayList<Card> newDeck = new ArrayList<>();
         while(this.deck.size() > 0) {
@@ -34,14 +31,6 @@ public class Deck {
         }
         this.deck = newDeck;
 
-    }
-
-    public Card getCard(int i){
-        return this.deck.get(i);
-    }
-
-    public void removeCard(int i){
-        this.deck.remove(i);
     }
 
     public void addCard(Card addCard) {

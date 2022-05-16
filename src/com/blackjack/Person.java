@@ -3,10 +3,12 @@ package com.blackjack;
 public abstract class Person {
     private Hand hand;
     private String name;
+    private Money balance;
 
     public Person() {
         this.hand = new Hand();
         this.name = "";
+        this.balance = new Money();
     }
 
     public boolean hasBlackJack() {
@@ -42,6 +44,10 @@ public abstract class Person {
         this.hand.takeCardFromDeck(deck);
         System.out.println(this.name + " gets a card");
         this.printHand();
+    }
+
+    public Money accountInfo() {
+        return this.balance;
     }
 
 
